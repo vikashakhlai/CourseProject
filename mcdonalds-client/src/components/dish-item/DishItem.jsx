@@ -18,7 +18,7 @@ const DishItem = ({ dish, readMore = '' }) => {
 				<Cost cost={dish.cost} />
 
 				{/* <Params weight={dish.weight} calories={dish.calories} /> */}
-				<Link to={`/dishes/${dish.id}`}>{readMore}</Link>
+				<Link to={`/CourseProject/dishes/${dish.id}`}>{readMore}</Link>
 			</div>
 		</div>
 	)

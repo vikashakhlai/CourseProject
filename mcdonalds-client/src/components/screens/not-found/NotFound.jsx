@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 
 import { useAuth } from '../../../hooks/useAuth'
 
+import happy from '../../../../public/happy.png'
+
 const NotFound = () => {
 	const { isAuth } = useAuth()
 
@@ -10,7 +12,7 @@ const NotFound = () => {
 
 	useEffect(() => {
 		if (!isAuth) {
-			navigate('/auth')
+			navigate('/CourseProject/auth')
 		}
 	}, [])
 
@@ -27,7 +29,7 @@ const NotFound = () => {
 					textAlign: 'center'
 				}}
 			>
-				<img src='/public/happy.png' alt='' />
+				<img src={happy} alt='' />
 			</div>
 		</>
 	)

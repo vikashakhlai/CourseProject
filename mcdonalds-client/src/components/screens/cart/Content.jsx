@@ -4,6 +4,7 @@ import { useAdmin } from '../../../hooks/useAdmin'
 
 import Layout from '../../layout/Layout'
 
+import styles from './Cart.module.scss'
 import MenuList from './MenuList'
 import ShowAlert from './ShowAlert'
 
@@ -104,6 +105,7 @@ const Content = () => {
 	return (
 		<Layout setItems={setCartItems} items={cartItems}>
 			<main className='container'>
+				<h2 className={styles.header}>Menu</h2>
 				{role === 'user' ? (
 					<>
 						{/* {/* <CartIcon length={cartItems.length} toggleShow={toggleShow} /> */}

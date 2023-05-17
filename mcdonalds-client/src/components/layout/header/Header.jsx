@@ -9,11 +9,12 @@ import { useAuth } from '../../../hooks/useAuth'
 
 import ShowAlert from '../../screens/cart/ShowAlert'
 
+import logo from '../../../../public/mainLogo.svg'
 import { TOKEN } from '../../../app.constants'
 
 import styles from './Header.module.scss'
 
-const Header = ({ backLink = '/' }) => {
+const Header = ({ backLink = '/CourseProject/' }) => {
 	const { pathname } = useLocation()
 	const navigate = useNavigate()
 
@@ -82,21 +83,21 @@ const Header = ({ backLink = '/' }) => {
 		localStorage.clear()
 		// Cookies.remove(TOKEN)
 		setIsAuth(false)
-		navigate('/auth')
+		navigate('/CourseProject/auth')
 	}
 
 	return (
 		<header className={styles.header}>
-			<Link to='/'>
-				<img height={100} width={100} src='/mainLogo.svg'></img>
+			<Link to='/CourseProject/'>
+				<img height={100} width={100} src={logo}></img>
 			</Link>
 			{isAuth && (
 				<>
-					{pathname !== '/profile' && isAuth ? (
+					{pathname !== '/CourseProject/profile' && isAuth ? (
 						<button
 							aria-label='Go to profile'
 							onClick={() => {
-								navigate('/profile')
+								navigate('/CourseProject/profile')
 							}}
 						>
 							<SlUser fill='#fff' fontSize={25} />
@@ -105,28 +106,28 @@ const Header = ({ backLink = '/' }) => {
 						<button
 							aria-label='Go back'
 							onClick={() => {
-								navigate(isAuth ? backLink : '/auth')
+								navigate(isAuth ? backLink : '/CourseProject/auth')
 							}}
 						>
 							<IoMdArrowBack fill='#fff' fontSize={29} />
 						</button>
 					)}
 
-					<Link to='/menu'>Menu</Link>
+					<Link to='/CourseProject/menu'>Menu</Link>
 
-					<Link to='/news'>News</Link>
+					<Link to='/CourseProject/news'>News</Link>
 
-					<Link to='/contacts'>Contacts</Link>
+					<Link to='/CourseProject/contacts'>Contacts</Link>
 
 					<>
 						{role === 'admin' ? (
 							<>
-								<Link to='/admin-orders'>Orders</Link>
+								<Link to='/CourseProject/admin-orders'>Orders</Link>
 
-								<Link to='/promotions'>Promotions</Link>
+								<Link to='/CourseProject/promotions'>Promotions</Link>
 							</>
 						) : (
-							<Link to='/orders'>Orders</Link>
+							<Link to='/CourseProject/orders'>Orders</Link>
 						)}
 					</>
 					{role === 'user' ? (
@@ -134,7 +135,7 @@ const Header = ({ backLink = '/' }) => {
 							{showAlert && (
 								<ShowAlert text={showAlert} hideAlert={hideAlert} />
 							)}
-							<Link to='/cart'>Cart</Link>
+							<Link to='/CourseProject/cart'>Cart</Link>
 						</>
 					) : null}
 					<AiOutlineLogout onClick={logoutHandler} />

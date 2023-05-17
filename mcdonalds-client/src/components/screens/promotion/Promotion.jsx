@@ -33,6 +33,7 @@ const Promotion = () => {
 	return (
 		<Layout>
 			<>
+				<h2 style={{ textAlign: 'center', fontSize: '40px' }}>Promotions</h2>
 				{role === 'admin' ? (
 					<div style={{ textAlign: 'center' }}>
 						{promotions.length ? (
@@ -49,7 +50,7 @@ const Promotion = () => {
 								</>
 							))
 						) : (
-							<p>There are no promotions</p>
+							<p style={{ textAlign: 'left' }}>There are no promotions</p>
 						)}
 					</div>
 				) : (

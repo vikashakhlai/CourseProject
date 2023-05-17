@@ -39,15 +39,17 @@ const AdminOrder = () => {
 	return (
 		<>
 			<Layout>
-				<h2>Order list</h2>
+				<h2 className={styles.header}>Order list</h2>
 				<div>
 					{orders.length ? (
 						orders.map(order => (
 							<>
 								<div className={styles.item}>
 									<OrderItem key={order.id} order={order} />
-									{/* <button onClick={() => setStatus(order.id)}>Complete</button> */}
 								</div>
+								<ItemsButton clickHandler={() => setStatus(order.id)}>
+									Complete order
+								</ItemsButton>
 								<ItemsButton clickHandler={() => deleteOrder(order.id)}>
 									Delete order
 								</ItemsButton>

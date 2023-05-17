@@ -134,7 +134,7 @@ const CartPage = () => {
 			<div className='cart-modal'>
 				{showAlert && <ShowAlert text={showAlert} hideAlert={hideAlert} />}
 
-				<Link to='/menu'>
+				<Link to='/CourseProject/menu'>
 					<FiX className='cart-modal-close' onClick={toggleShow} />
 				</Link>
 				<h5 className='red-text text-lighten-1'>Cart</h5>

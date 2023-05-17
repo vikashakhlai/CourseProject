@@ -24,14 +24,17 @@ export const useAuthPage = () => {
 
 	useEffect(() => {
 		if (isAuth) {
+			navigate('/CourseProject/')
 			location.reload()
-			navigate('/')
 		}
 	}, [isAuth])
 
 	const { mutate, isLoading } = useMutation(
 		['auth'],
-		({ email, password }) => AuthService.main(email, password, type),
+		({ email, password }) =>
+			AuthService.main(email, password, type).catch(err => {
+				alert(err)
+			}),
 		{
 			onSuccess: () => {
 				setIsAuth(true)
@@ -41,7 +44,11 @@ export const useAuthPage = () => {
 	)
 
 	const onSubmit = data => {
-		mutate(data)
+		try {
+			mutate(data)
+		} catch (err) {
+			alert('Error data. Please check fields')
+		}
 	}
 
 	return useMemo(

@@ -9,12 +9,12 @@ const Contacts = () => {
 	return (
 		<Layout>
 			<div className={styles.container}>
-				<h2 style={{ textAlign: 'center' }}>Contacts</h2>
+				<h2 className={styles.header}>Contacts</h2>
 				{contacts.length ? (
 					contacts.map(item => (
 						<div className={styles.item}>
 							<p>{item.city}</p>
-							<p>{item.address}</p>
+							<p className={styles.address}>{item.address}</p>
 						</div>
 					))
 				) : (

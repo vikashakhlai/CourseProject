@@ -24,7 +24,7 @@ const Auth = () => {
 						options={{
 							required: 'Email is required'
 						}}
-						type='text'
+						type='email'
 						placeholder='Enter email'
 					/>
 

@@ -35,7 +35,7 @@ const DishDetail = () => {
 					style={{ display: 'flex', flexDirection: 'column', width: '360px' }}
 					className={styles.item}
 				>
-					<Link className={styles.back} to='/menu'>
+					<Link className={styles.back} to='/CourseProject/'>
 						<FiX></FiX>
 					</Link>
 					<DishItem dish={dish} />

@@ -9,7 +9,7 @@ const Layout = ({
 	children,
 	bgImage,
 	heading = '',
-	backLink = '/',
+	backLink = '/CourseProject/',
 	items,
 	setItems
 }) => {

@@ -16,7 +16,7 @@ const ShopCard = props => {
 	return (
 		<div id={'product-' + id} className='card'>
 			<div className='card-image waves-effect waves-block waves-light'>
-				<Link to={`/dishes/${id}`}>
+				<Link to={`/CourseProject/dishes/${id}`}>
 					<div className={styles.cartImage}>
 						<img
 							className='activator'

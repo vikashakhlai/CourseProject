@@ -41,7 +41,7 @@ const MenuList = props => {
 					/>
 				))
 			) : (
-				<p>Not dishes</p>
+				<p>There are no dishes</p>
 			)}
 		</div>
 	)

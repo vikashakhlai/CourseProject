@@ -10,3 +10,20 @@
 		font-size: 26px;
 	}
 }
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	text-align: center;
+	margin: 0 auto;
+	img {
+		height: 600px;
+		width: 400px;
+		margin: 0 auto;
+	}
+}
+.header {
+	font-size: 40px;
+}

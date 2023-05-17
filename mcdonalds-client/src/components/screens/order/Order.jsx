@@ -27,7 +27,7 @@ const Order = () => {
 	return (
 		<Layout>
 			<>
-				<h2>Orders list</h2>
+				<h2 className={styles.header}>Orders list</h2>
 				<div className={styles.item}>
 					{orders.length ? (
 						orders.map(order => (
