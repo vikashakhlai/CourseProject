@@ -1,0 +1,17 @@
+@import 'src/assets/styles/variables';
+
+.header {
+	text-align: center;
+	margin: 40px 0;
+	font-size: 60px;
+}
+
+.trash {
+	font-size: 42px;
+	margin-top: 8px;
+
+	text-align: center;
+	@media (max-width: $mobile) {
+		font-size: 26px;
+	}
+}

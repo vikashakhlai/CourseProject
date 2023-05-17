@@ -1,0 +1,290 @@
+@import './variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	font-family: $default-font;
+	letter-spacing: 0.5px;
+}
+
+*::-webkit-input-placeholder {
+	color: #c0c0c0;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #c0c0c0;
+	opacity: 1;
+}
+
+*::-moz-placeholder {
+	color: #c0c0c0;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #c0c0c0;
+	opacity: 1;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: $black;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	font-size: 20px;
+	min-width: 360px;
+	position: relative;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+#root {
+	height: 100%;
+}
+
+.dark-link {
+	text-align: right;
+	width: 100%;
+	display: block;
+	margin-bottom: 0.5rem;
+	text-decoration: none;
+	color: $dark-accent;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: darken($accent, 10%);
+	}
+}
+
+.wrapper-inner-page {
+	padding: 40px 30px;
+	text-align: center;
+	max-width: 560px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.error {
+	color: #8d2b3d;
+	font-size: 1rem;
+}
+
+.select2-selection {
+	&__control {
+		cursor: pointer !important;
+		margin-bottom: 2rem;
+		border-radius: 10px !important;
+		min-height: 48px !important;
+		background-color: $dark-accent !important;
+		border: 1px solid transparent !important;
+		color: $white;
+		font-size: 18px;
+		width: 100%;
+		&--is-focused {
+			border-color: transparent !important;
+			box-shadow: 0 0 0 1px rgba($accent, 0.3) !important;
+		}
+	}
+
+	&__menu {
+		background-color: $dark-accent !important;
+		border-radius: 10px !important;
+
+		&-list {
+			padding: 0 !important;
+			border-radius: 10px !important;
+		}
+
+		&-notice {
+			color: #946e86 !important;
+		}
+	}
+
+	&__option {
+		&--is-focused {
+			background-color: darken($dark-accent, 7%) !important;
+		}
+		&--is-selected {
+			background-color: darken($dark-accent, 8%) !important;
+		}
+	}
+
+	&__indicator,
+	&__indicator:hover {
+		color: $white !important;
+	}
+
+	&__placeholder {
+		color: #946e86 !important;
+		margin-left: 6px !important;
+		text-align: left;
+	}
+
+	&__single-value {
+		color: $white !important;
+	}
+
+	&__multi-value {
+		border-radius: 6px !important;
+		background-color: lighten($dark-accent, 10%) !important;
+
+		&__label {
+			color: $white !important;
+		}
+
+		&__remove:hover {
+			background-color: #8b2557 !important;
+			color: $white !important;
+		}
+	}
+
+	&__input {
+		color: $white !important;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+.page-footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+nav {
+	box-shadow: none;
+}
+
+.items {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0 3px 6px $white;
+}
+
+.card .card-content {
+	flex-grow: 1;
+}
+
+.card {
+	font-size: 18px;
+	padding: 20px 0;
+}
+
+.card-title {
+	font-size: 26px;
+	height: 30px;
+}
+
+.btn,
+.btn-large,
+.btn-small,
+.btn-flat {
+	padding: 0 10px;
+}
+
+.cart-icon {
+	z-index: 100;
+	right: 40px;
+	top: 10px;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: #fff;
+}
+
+.cart-modal {
+	position: fixed;
+	z-index: 50;
+	min-width: 60%;
+	color: #fff;
+	max-width: 100%;
+	max-height: 80vh;
+	overflow-y: auto;
+	/* top: 10%;
+	left: 70%; */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: $hard-dark-accent;
+	padding: 10px;
+	border: 3px solid #ef5350;
+}
+
+.cart-modal-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #ef5350;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.cart-item-delete {
+	cursor: pointer;
+	color: #26a69a;
+}
+
+.show-alert {
+	position: fixed;
+	z-index: 100;
+	right: 0px;
+	top: 0px;
+	background-color: rgb(#fff, 1);
+	color: $hard-dark-accent;
+	padding: 10px;
+}

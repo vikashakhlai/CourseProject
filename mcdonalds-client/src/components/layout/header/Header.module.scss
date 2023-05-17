@@ -1,0 +1,28 @@
+@import 'src/assets/styles/variables';
+
+.header {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+
+	> button {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+.list {
+	display: flex;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+	&:hover {
+		color: rgb(red, 0.5);
+		transition: color 0.3s ease;
+	}
+}

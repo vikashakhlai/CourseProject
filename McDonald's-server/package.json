@@ -1,0 +1,35 @@
+{
+	"name": "McDonald's",
+	"version": "1.0.0",
+	"description": "McDonald's app (react+express)",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon ./server.js",
+		"start": "node ./server.js"
+	},
+	"author": "V.Shakhlai",
+	"license": "MIT",
+	"dependencies": {
+		"@faker-js/faker": "^7.6.0",
+		"@prisma/client": "4.13.0",
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
+		"argon2": "^0.30.3",
+		"body-parser": "^1.20.2",
+		"colors": "^1.4.0",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"express-async-handler": "^1.2.0",
+		"express-fileupload": "^1.4.0",
+		"jsonwebtoken": "^9.0.0",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.22",
+		"pg": "^8.10.0",
+		"prettier": "^2.8.7",
+		"prisma": "^4.13.0",
+		"socket.io": "^4.6.1",
+		"uuid": "^9.0.0"
+	}
+}
