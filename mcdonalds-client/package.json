@@ -1,6 +1,6 @@
 {
 	"name": "wa-client",
-	"homepage": "https://vikashakhlai.github.io",
+	"homepage": "https://vikashakhlai.github.io/CourseProject/",
 "vate": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -8,7 +8,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"predeploy": "yarn build",
+		"predeploy": "yarn run build",
 		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
