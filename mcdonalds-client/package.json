@@ -1,7 +1,7 @@
 {
 	"name": "wa-client",
-	"homepage": "https://vikashakhlai.github.io/CourseProject/",
-"vate": true,
+	"homepage": "https://vikashakhlai.github.io/",
+	"vate": true,
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
